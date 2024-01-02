@@ -190,6 +190,7 @@ header {
 
 .about-content .about-description {
     background-color: red;
+    position: relative;
 }
 
 .about-content .skills {
@@ -200,4 +201,97 @@ header {
     width: 25%;
     height: 25%;
     box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    translate: -50%;
+    text-align: center;
+    font-size: 5em;
+    padding: 1rem 0;
+}
+
+.about-description .description {
+    
+}
+
+.about-description a {
+    text-decoration: none;
+    color: var(--nav-color);
+    border: 2px solid white;
+    background-color: var(--nav-bg-color);
+    padding: 1rem 1.5rem;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+}
+
+.wrapper {
+    width: 90%;
+    height: 70%;
+    background-color: antiquewhite;
+    position: relative;
+    left: 50%;
+    translate: -50%;
+}
+
+.wrapper button {
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper button:first-child {
+    left: -22px;
+}
+
+.wrapper button:last-child {
+    right: -22px;
+}
+
+.wrapper .projects-content {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    gap: 1em;
+    /* align-items: space-between;     */
+    /* padding: 1em; */
+    box-sizing: border-box;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.projects-content.dragging .card {
+    user-select: none;
+    cursor: grabbing;
+}
+
+.projects-content.dragging {
+    scroll-behavior: auto;
+    cursor: grabbing;
+}
+
+.projects-content .card {
+    height: 100%;
+    width: calc((100% - 2em) / 3);
+    flex: none;
+    list-style: none;
+    /* width: 340px; */
+    /* height: 100%; */
+    background-color: darkgray;
+    /* box-sizing: border-box; */
+    /* overflow: hidden; */
+    cursor: pointer;
+}
+
+.projects-content .card h1 {
+    margin-top: 3em;
+    text-align: center;
 }
