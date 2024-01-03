@@ -61,11 +61,6 @@ function dragging(e) {
 }
 
 function stopDrag(e) {
-    // console.log(e.target);
-    // if (arrowBtnArray.includes(e.target)) {
-    //     console.log("Arrow Button Clicked");
-    //     return; // if arrow button is clicked, do nothing
-    // }
 
     isDragging = false;
     carousel.classList.remove('dragging');

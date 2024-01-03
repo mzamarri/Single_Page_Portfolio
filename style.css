@@ -103,7 +103,7 @@ header {
     /* text-align: center; */
 }
 
-#section-4 {
+#contact {
     background-color: red;
 }
 
@@ -294,4 +294,46 @@ header {
 .projects-content .card h1 {
     margin-top: 3em;
     text-align: center;
+}
+
+/* Contact Section */
+
+.contact form {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: 0.7rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #333;
+    border: 0.2rem solid #333;
+    border-radius: 0.3rem;
+    /* outline: none; */
+    /* background: transparent; */
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: 0.7rem 0 2rem;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
 }
