@@ -27,8 +27,8 @@ async function sendMail(subject, message) {
     const TO = process.env.EMAIL_TO;
     // console.log("client id: ", client_id);
     // console.log("client secret: ", client_secret);
-    // console.log("USER: ", USER);
-    // console.log("TO: ", TO);
+    console.log("USER: ", USER);
+    console.log("TO: ", TO);
     // Generate an access token
     const tokenResponse = await oauth2Client.getAccessToken();
     // console.log("token response: ", tokenResponse);

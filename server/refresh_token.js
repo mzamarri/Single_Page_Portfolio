@@ -91,7 +91,7 @@ async function getAccessToken() {
                         overWriteRefreshToken(refreshToken)
                     }
                 } else {
-                    fs.writeAppendSync('./.env', `REFRESH_TOKEN=${tokens.refresh_token}\n`);
+                    fs.appendFileSync('./.env', `#Refresh Token ${os.EOL}REFRESH_TOKEN=${tokens.refresh_token}${os.EOL}`);
                     console.log('tokens written to .env file')
                 }
             }
