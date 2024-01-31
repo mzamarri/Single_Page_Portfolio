@@ -103,25 +103,25 @@
             </section>
             <section class="contact" id="contact">
                 <h1>Contact</h1>
-                <form action="">
+                <form action="/contact-form/" method="POST">
                     <div class="input-box">
                         <div class="input-field">
-                            <input type="text" placeholder="Full Name">
+                            <input type="text" name="fullName" placeholder="Full Name">
                         </div>
                         <div class="input-field">
-                            <input type="text" placeholder="Email">
+                            <input type="text" name="email" placeholder="Email">
                         </div>
                     </div>
                     <div class="input-box">
                         <div class="input-field">
-                            <input type="text" placeholder="Phone Number">
+                            <input type="text" name="phoneNumber" placeholder="Phone Number">
                         </div>
                         <div class="input-field">
-                            <input type="text" placeholder="Subject">
+                            <input type="text" name="subject" placeholder="Subject">
                         </div>
                     </div>
                     <div class="textarea-field">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <textarea name="message" id="" cols="30" rows="15" placeholder="Message"></textarea>
                     </div>
                     <div class="btn-box btns">
                         <button type="submit" class="btn">Submit</button>

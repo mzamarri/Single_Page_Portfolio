@@ -5,6 +5,10 @@
     --nav-bg-color: #283747;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     /* width: 100vw; */
     margin: 0;
@@ -108,7 +112,7 @@ header {
 }
 
 #container section > h1 {
-    margin: 60px;
+    margin: 30px;
     /* padding: 0; */
     text-align: center;
 }
@@ -298,6 +302,10 @@ header {
 
 /* Contact Section */
 
+.contact {
+    /* padding-bottom: 3rem; */
+}
+
 .contact form {
     max-width: 60rem;
     margin: 0 auto;
@@ -320,7 +328,7 @@ header {
 .contact form .input-box .input-field input,
 .contact form .textarea-field textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 0.7rem;
     font-size: 1rem;
     color: #333;
     border: 0.2rem solid #333;
@@ -332,6 +340,7 @@ header {
 .contact form .textarea-field {
     position: relative;
     margin: 0.7rem 0 2rem;
+    /* display: flex; */
 }
 
 .contact form .textarea-field textarea {
