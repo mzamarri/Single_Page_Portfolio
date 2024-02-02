@@ -1,6 +1,3 @@
-# Ignore environment files containing sensitive information about me
-.env.*
-
 # Ignore node_modules
 node_modules/
 
