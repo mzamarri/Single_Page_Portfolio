@@ -83,7 +83,7 @@ function formHandler(req) {
             console.error(err.stack);
             reject(err);
         });
-    })
+    });
 };
 
 // input validation function to check if all fields are filled out appropriately
