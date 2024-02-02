@@ -1,0 +1,13 @@
+# Ignore environment files containing sensitive information about me
+.env.*
+
+# Ignore node_modules
+node_modules/
+
+# Ignore hidden files
+.*
+# But not .gitignore
+!.gitignore
+
+# Ignore client secret file
+client_secret.json
