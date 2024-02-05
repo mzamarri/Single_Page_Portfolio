@@ -9,6 +9,11 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
 }
 
 body {
@@ -33,7 +38,7 @@ header {
 }
 
 #logo {
-    background-color: grey;
+    background-color: yellowgreen;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -101,7 +106,7 @@ header {
     padding: 15px 25px;
     border: 3px solid yellowgreen;
     border-radius: 5%;
-    /* background-color: blue; */
+    background-color: transparent;
     color: yellowgreen;
     text-decoration: none;
     position: relative;
@@ -176,7 +181,7 @@ header {
 /* Home Section */
 .home-content {
     width: 85%;
-    height: 50%;
+    height: 70%;
     position: relative;
     left: 50%;
     top: 50%;
@@ -190,21 +195,54 @@ header {
 .home-content .portfolio-picture {
     width: 50%;
     height: 100%;
-    background-color: var(--nav-bg-color);
+    background-color: yellowgreen;
 }
 
 .home-content .content-description {
     width: 50%;
     height: 100%;
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     /* justify-content: end; */
-    padding: 2em 0;
+    /* padding: 2em 0; */
+    justify-content: center;
     box-sizing: border-box;
 }
 
 .home-content .content-description h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+}
+
+.home-content .content-description .text-animate {
+    position: relative;
+    width: auto;
+}
+
+.home-content .content-description .text-animate h3 {
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: yellowgreen 1px;
+    font-size: 2rem;
+    font-weight: 700;
+    background-image: linear-gradient(yellowgreen, yellowgreen);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: - 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content .content-description .text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid yellowgreen;
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 /* About Section */
@@ -215,6 +253,7 @@ header {
     position: relative;
     left: 50%;
     translate: -50%;
+    display: flex;
 }
 
 .about-content .about-description, .about-content .skills {
@@ -226,10 +265,14 @@ header {
 .about-content .about-description {
     background-color: var(--bg-second);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-content .skills {
-    background-color: var(--bg-second);
+    /* background-color: var(--bg-second); */
+    background-color: yellowgreen;
 }
 
 .about-content .logo {
@@ -242,10 +285,6 @@ header {
     text-align: center;
     font-size: 5em;
     padding: 1rem 0;
-}
-
-.about-description .description {
-    
 }
 
 .about-description a {
@@ -266,7 +305,7 @@ header {
 .wrapper {
     width: 90%;
     height: 70%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     position: relative;
     left: 50%;
     translate: -50%;
@@ -324,7 +363,7 @@ header {
     list-style: none;
     /* width: 340px; */
     /* height: 100%; */
-    background-color: darkgray;
+    background-color: yellowgreen;
     /* box-sizing: border-box; */
     /* overflow: hidden; */
     cursor: pointer;
@@ -336,10 +375,6 @@ header {
 }
 
 /* Contact Section */
-
-.contact {
-    /* padding-bottom: 3rem; */
-}
 
 .contact form {
     max-width: 60rem;
@@ -365,11 +400,17 @@ header {
     width: 100%;
     padding: 0.7rem;
     font-size: 1rem;
-    color: #333;
-    border: 0.2rem solid #333;
+    color: whitesmoke;
+    border: 0.2rem solid yellowgreen;
     border-radius: 0.3rem;
+    background-color: transparent;
     /* outline: none; */
     /* background: transparent; */
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .contact form .textarea-field {
@@ -380,4 +421,38 @@ header {
 
 .contact form .textarea-field textarea {
     resize: none;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes homeBgText {
+    0%,
+    10%,
+    100% {
+        background-position: -38rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
 }
