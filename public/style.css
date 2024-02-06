@@ -222,6 +222,7 @@ header {
     display: inline-block;
     color: transparent;
     -webkit-text-stroke: yellowgreen 1px;
+<<<<<<< Updated upstream
     font-size: 2rem;
     font-weight: 700;
     background-image: linear-gradient(yellowgreen, yellowgreen);
@@ -229,6 +230,23 @@ header {
     -webkit-background-clip: text;
     background-position: - 0;
     animation: homeBgText 6s linear infinite;
+=======
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.home-content .content-description .text-animate h3::before {
+    content: 'Full-Stack Developer';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    white-space: nowrap;
+    color: yellowgreen;
+    overflow: hidden;
+    animation: homeFillText 6s linear infinite;
+>>>>>>> Stashed changes
     animation-delay: 2s;
 }
 
