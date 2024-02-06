@@ -17,11 +17,6 @@
 }
 
 body {
-    /* width: 100vw; */
-    margin: 0;
-    padding: 0;
-    /* position: absolute; */
-    /* top: 10vh; */
     font-family: 'Roboto', sans-serif;
     background-color: var(--bg-primary);
 }
@@ -160,18 +155,6 @@ header {
     /* text-align: center; */
 }
 
-#section-3 {
-    /* display: inline-block; */
-    /* width: 100%; */
-    /* height: 90vh; */
-    /* background-color: green; */
-    /* text-align: center; */
-}
-
-#contact {
-    /* background-color: red; */
-}
-
 #container section > h1 {
     margin: 30px;
     /* padding: 0; */
@@ -213,35 +196,26 @@ header {
     font-size: 3rem;
 }
 
-/* .home-content .content-description .text-animate {
-    position: relative;
+.home-content .content-description .text-animate {
     display: inline-block;
-} */
-
-.home-content .content-description .text-animate h3 {
-    display: inline-block;
-    position: relative;
-    color: transparent;
-    -webkit-text-stroke: yellowgreen 0.7px;
-    font-size: 2.5rem;
-    font-weight: 400;
+    width: max-content;
 }
 
-.home-content .content-description .text-animate h3::before {
-    content: 'Full-Stack Developer';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    white-space: nowrap;
+.home-content .content-description .text-animate h3 {
+    /* display: inline-block; */
+    position: relative;
     color: yellowgreen;
+    border-right: 2px solid rgb(153, 205, 50);
+    width: 0;
+    white-space: nowrap;
     overflow: hidden;
-    animation: homeFillText 6s linear infinite;
+    font-size: 2.5rem;
+    font-weight: 700;
+    animation: homeFillText 6s steps(19) infinite;
     animation-delay: 2s;
 }
 
-.home-content .content-description .text-animate h3::after {
+/* .home-content .content-description .text-animate h3::before {
     content: '';
     position: absolute;
     top: 0;
@@ -249,9 +223,9 @@ header {
     width: 0;
     height: 100%;
     border-right: 2px solid yellowgreen;
-    animation: homeCursorText 6s linear infinite;
+    animation: homeFillText 6s linear infinite;
     animation-delay: 2s;
-}
+} */
 
 /* About Section */
 #section-2 .about-content {
@@ -457,7 +431,6 @@ header {
     85% {
         width: 100%;
         opacity: 1;
-        border: 
     }
 
     75%,
