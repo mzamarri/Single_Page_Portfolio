@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
     scroll-behavior: smooth;
     --nav-height: 60px;
@@ -46,6 +48,7 @@ header {
     top: 5px;
     left: 5px;
 }
+
 
 /* Nav-bar */
 #nav-bar {
@@ -196,6 +199,7 @@ header {
     width: 50%;
     height: 100%;
     background-color: yellowgreen;
+    border-radius: 50%;
 }
 
 .home-content .content-description {
@@ -254,6 +258,14 @@ header {
     animation-delay: 2s;
 }
 
+.home-content .content-description p {
+    margin: 2.5rem 0 1rem;
+}
+
+.home-content .portfolio-picture {
+
+}
+
 /* About Section */
 #section-2 .about-content {
     width: 90%;
@@ -284,9 +296,8 @@ header {
     background-color: yellowgreen;
 }
 
-.about-content .logo {
-    width: 25%;
-    height: 25%;
+.about-content .about-description .logo {
+    font-size: 5em;
     box-sizing: border-box;
     position: relative;
     left: 50%;
@@ -294,6 +305,10 @@ header {
     text-align: center;
     font-size: 5em;
     padding: 1rem 0;
+}
+
+.about-content .about-description .logo span {
+    color: yellowgreen;
 }
 
 .about-description a {
