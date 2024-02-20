@@ -47,6 +47,9 @@ header {
     position: relative;
     top: 5px;
     left: 5px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 
@@ -198,8 +201,9 @@ header {
 .home-content .portfolio-picture {
     width: 50%;
     height: 100%;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     border-radius: 50%;
+    border: 5px solid yellowgreen;
 }
 
 .home-content .content-description {
@@ -241,7 +245,6 @@ header {
     color: yellowgreen;
     overflow: hidden;
     animation: homeFillText 6s linear infinite;
->>>>>>> Stashed changes
     animation-delay: 2s;
 }
 
@@ -262,9 +265,9 @@ header {
     margin: 2.5rem 0 1rem;
 }
 
-.home-content .portfolio-picture {
-
-}
+/* .home-content .portfolio-picture {
+    
+} */
 
 /* About Section */
 #section-2 .about-content {
@@ -273,25 +276,32 @@ header {
     /* background-color: antiquewhite; */
     position: relative;
     left: 50%;
-    translate: -50%;
-    display: flex;
+    top: 50%;
+    translate: -50% -50%;
+    /* display: flex; */
 }
 
 .about-content .about-description, .about-content .skills {
-    width: 50%;
     height: 100%;
     float: left;
 }
 
 .about-content .about-description {
+    width: 60%;
     background-color: var(--bg-second);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 2rem;
+}
+
+.about-content .about-description .description {
+    margin-bottom: 1rem;
 }
 
 .about-content .skills {
+    width: 40%;
     /* background-color: var(--bg-second); */
     background-color: yellowgreen;
 }
