@@ -4,17 +4,37 @@ const path = require("path");
 const querystring = require("querystring");
 const { google } = require("googleapis");
 const env = require('dotenv').config({path: path.join(__dirname, '../.env')});
-const clientSecret = require('./client_secret.json');
+
+// This function will run and check if the client_secret.json file exists, and if not it will check if 
+// the secrets are in environment variables. Else if will throw an error.
+const [client_id, client_secret] = () => {
+    try {
+        const clientSecret = require('./client_secret.json');
+        return [clientSecret.web.client_id, clientSecret.web.client_secret];
+    } catch (err) {
+        console.error("Error reading client_secret.json: ", err);
+        console.log("Checking if secrets are in environment variables");
+        if (process.env.client_id && process.env.client_secret) {
+            console.log("Secrets are in environment variables");
+            const client_id = process.env.client_id;
+            const client_secret = process.env.client_secret;
+            return [client_id, client_secret];
+        } else {
+            console.error("No client_secret.json file or environment variables found");
+        }
+    }
+}
 const nodemailer = require('nodemailer');
 
 // Creating oauth2Client
 const oauth2Client = new google.auth.OAuth2(
-    clientSecret.web.client_id,
-    clientSecret.web.client_secret,
+    client_id,
+    client_secret,
 );
 
 // Sets the credentials to the refresh token
 const refreshToken = process.env.REFRESH_TOKEN;
+
 // console.log("refresh token: ", refresh_token);
 oauth2Client.setCredentials({
     refresh_token: refreshToken,
