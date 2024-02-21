@@ -26,6 +26,8 @@ const [client_id, client_secret] = () => {
 }
 const nodemailer = require('nodemailer');
 
+const PORT = process.env.PORT || 3000;
+
 // Creating oauth2Client
 const oauth2Client = new google.auth.OAuth2(
     client_id,
@@ -215,6 +217,7 @@ const server = http.createServer(function (req, res) {
     }
 });
 
-server.listen(4000, () => {
-    console.log("Server is running on port 4000");
+server.listen(PORT, () => {
+    console.log("Test")
+    console.log(`Server is running on port ${PORT}`);
 });

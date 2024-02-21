@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
     scroll-behavior: smooth;
     --nav-height: 60px;
@@ -45,7 +47,11 @@ header {
     position: relative;
     top: 5px;
     left: 5px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
+
 
 /* Nav-bar */
 #nav-bar {
@@ -195,7 +201,9 @@ header {
 .home-content .portfolio-picture {
     width: 50%;
     height: 100%;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
+    border-radius: 50%;
+    border: 5px solid yellowgreen;
 }
 
 .home-content .content-description {
@@ -222,13 +230,21 @@ header {
     display: inline-block;
     color: transparent;
     -webkit-text-stroke: yellowgreen 1px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    background-image: linear-gradient(yellowgreen, yellowgreen);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: - 0;
-    animation: homeBgText 6s linear infinite;
+}
+
+.home-content .content-description .text-animate h3::before {
+    content: 'Full-Stack Developer';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    white-space: nowrap;
+    color: yellowgreen;
+    overflow: hidden;
+    animation: homeFillText 6s linear infinite;
     animation-delay: 2s;
 }
 
@@ -245,6 +261,14 @@ header {
     animation-delay: 2s;
 }
 
+.home-content .content-description p {
+    margin: 2.5rem 0 1rem;
+}
+
+/* .home-content .portfolio-picture {
+    
+} */
+
 /* About Section */
 #section-2 .about-content {
     width: 90%;
@@ -252,32 +276,38 @@ header {
     /* background-color: antiquewhite; */
     position: relative;
     left: 50%;
-    translate: -50%;
-    display: flex;
+    top: 50%;
+    translate: -50% -50%;
+    /* display: flex; */
 }
 
 .about-content .about-description, .about-content .skills {
-    width: 50%;
     height: 100%;
     float: left;
 }
 
 .about-content .about-description {
+    width: 60%;
     background-color: var(--bg-second);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 2rem;
+}
+
+.about-content .about-description .description {
+    margin-bottom: 1rem;
 }
 
 .about-content .skills {
+    width: 40%;
     /* background-color: var(--bg-second); */
     background-color: yellowgreen;
 }
 
-.about-content .logo {
-    width: 25%;
-    height: 25%;
+.about-content .about-description .logo {
+    font-size: 5em;
     box-sizing: border-box;
     position: relative;
     left: 50%;
@@ -285,6 +315,10 @@ header {
     text-align: center;
     font-size: 5em;
     padding: 1rem 0;
+}
+
+.about-content .about-description .logo span {
+    color: yellowgreen;
 }
 
 .about-description a {
